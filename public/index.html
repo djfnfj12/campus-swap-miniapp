@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, user-scalable=no">
+  <meta name="theme-color" content="#2b8cff">
+  <title>校园闲置 · 二手交易小程序</title>
+  <link rel="icon" type="image/svg+xml" href="/img/logo.svg">
+  <link rel="stylesheet" href="/css/app.css">
+</head>
+<body>
+  <div class="stage">
+    <aside class="stage-info">
+      <div class="brand">
+        <img src="/img/logo.svg" alt="logo" class="brand-logo">
+        <div>
+          <h1>校园闲置物品交易小程序</h1>
+          <p class="muted">Campus Second-hand Trading Mini-Program</p>
+        </div>
+      </div>
+
+      <section class="info-card">
+        <h2>演示账号</h2>
+        <p class="muted">密码统一为 <code>123456</code></p>
+        <ul class="account-list">
+          <li><b>20230101</b><span>张小满 · 计算机学院（卖家）</span></li>
+          <li><b>20230102</b><span>李子墨 · 外国语学院</span></li>
+          <li><b>20230103</b><span>王大锤 · 机械工程学院（买家）</span></li>
+          <li><b>20230104</b><span>陈雨桐 · 经济管理学院</span></li>
+        </ul>
+        <p class="muted small">也可点击「注册」使用任意新学号创建账号。</p>
+      </section>
+
+      <section class="info-card">
+        <h2>功能模块</h2>
+        <div class="module-grid">
+          <span>注册登录</span><span>商品发布</span><span>多条件检索</span><span>分类导航</span>
+          <span>收藏夹</span><span>下单交易</span><span>订单状态机</span><span>买卖家互评</span>
+          <span>即时私信</span><span>已读回执</span><span>图片上传</span><span>个人中心</span>
+        </div>
+      </section>
+
+      <section class="info-card">
+        <h2>技术栈</h2>
+        <p class="muted small">前端：原生 HTML / CSS / JS，移动端仿小程序交互（无构建步骤）<br>
+        后端：Node.js 内置 http + 自研路由中间件（零第三方依赖）<br>
+        数据：SQLite（node:sqlite）· 口令 scrypt 加盐 · HMAC Token 会话<br>
+        工程：RESTful 接口 · 状态机订单流转 · 分层架构 · 自动化测试</p>
+      </section>
+    </aside>
+
+    <div class="device" id="device">
+      <div class="statusbar" id="statusbar">
+        <span id="clock">9:41</span>
+        <span class="sb-icons">
+          <svg width="17" height="11" viewBox="0 0 17 11"><rect x="0" y="7" width="3" height="4" rx="1" fill="#fff"/><rect x="4.5" y="5" width="3" height="6" rx="1" fill="#fff"/><rect x="9" y="2.5" width="3" height="8.5" rx="1" fill="#fff"/><rect x="13.5" y="0" width="3" height="11" rx="1" fill="#fff" opacity=".45"/></svg>
+          <svg width="16" height="12" viewBox="0 0 16 12"><path d="M8 10.5l2.2-2.4a3.1 3.1 0 00-4.4 0L8 10.5zM8 6.2c1.5 0 2.9.6 3.9 1.6l1.4-1.5A7.5 7.5 0 008 4.2c-2 0-3.9.8-5.3 2.1l1.4 1.5A5.4 5.4 0 018 6.2zM8 1.8c2.6 0 5 1 6.8 2.7L16 3A11 11 0 008 0 11 11 0 000 3l1.2 1.5A9.7 9.7 0 018 1.8z" fill="#fff"/></svg>
+          <svg width="26" height="12" viewBox="0 0 26 12"><rect x="0.5" y="0.5" width="21" height="11" rx="3" fill="none" stroke="#fff" opacity=".5"/><rect x="2" y="2" width="16" height="8" rx="1.6" fill="#fff"/><path d="M23 4v4a2.2 2.2 0 000-4z" fill="#fff" opacity=".5"/></svg>
+        </span>
+      </div>
+
+      <header class="navbar" id="navbar"></header>
+
+      <main class="page-scroll" id="view"></main>
+
+      <nav class="tabbar" id="tabbar"></nav>
+
+      <div class="home-indicator"></div>
+    </div>
+  </div>
+
+  <div class="toast" id="toast"></div>
+  <div class="modal-mask" id="modal" hidden></div>
+
+  <script src="/js/api.js"></script>
+  <script src="/js/ui.js"></script>
+  <script src="/js/app.js"></script>
+  <script src="/js/views/home.js"></script>
+  <script src="/js/views/category.js"></script>
+  <script src="/js/views/item.js"></script>
+  <script src="/js/views/trade.js"></script>
+  <script src="/js/views/message.js"></script>
+  <script src="/js/views/user.js"></script>
+</body>
+</html>

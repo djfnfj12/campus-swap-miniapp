@@ -1,0 +1,24 @@
+# 运行时数据（云端每次部署重建，不入库）
+data/
+*.db
+*.db-wal
+*.db-shm
+
+# 上传的图片
+public/uploads/*
+!public/uploads/.gitkeep
+
+# 依赖与日志
+node_modules/
+npm-debug.log*
+
+# 临时产物
+public/_pnggrid-*.html
+tools/_out/
+*.log
+
+# 编辑器 / 系统
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/

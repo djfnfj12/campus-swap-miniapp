@@ -1,0 +1,17 @@
+# Render 免费托管蓝图：校园闲置物品交易小程序
+# 部署：Render 控制台 → New → Blueprint → 连接本 GitHub 仓库
+services:
+  - type: web
+    name: campus-swap
+    runtime: node
+    plan: free
+    region: oregon
+    buildCommand: "node --version"
+    # 首次启动自动灌入演示数据（已有数据则跳过），随后启动服务
+    startCommand: "node server/seed.js && node server/index.js"
+    healthCheckPath: /api/health
+    envVars:
+      - key: NODE_VERSION
+        value: "24.19.0"
+      - key: HOST
+        value: "0.0.0.0"

@@ -1,0 +1,35 @@
+<!doctype html><html><head><meta charset="utf-8"><style>*{margin:0;padding:0}body{width:max-content;background:#fff}svg{display:block}</style></head><body><svg xmlns="http://www.w3.org/2000/svg" width="760" height="630" viewBox="0 0 760 630"><defs><marker id="arr" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><path d="M0,0 L10,3.5 L0,7 z" fill="#5A6B7D"/></marker></defs>
+<!-- 开始 -->
+<rect x="300" y="16" width="160" height="44" rx="22" fill="#2B8CFF" stroke="#1E6FD9" stroke-width="1.5"/>
+<text x="380" y="44" font-size="16" font-weight="bold" fill="#fff" text-anchor="middle" font-family="Microsoft YaHei, SimHei, sans-serif">开始</text>
+<line x1="380" y1="60" x2="380" y2="94" stroke="#5A6B7D" stroke-width="1.5" marker-end="url(#arr)"/>
+<!-- 输入 year（平行四边形） -->
+<polygon points="314,96 460,96 446,144 300,144" fill="#DCEBFF" stroke="#2B8CFF" stroke-width="1.5"/>
+<text x="380" y="125" font-size="15" fill="#1B5FA8" text-anchor="middle" font-family="Microsoft YaHei, SimHei, sans-serif">输入 year</text>
+<line x1="380" y1="144" x2="380" y2="181" stroke="#5A6B7D" stroke-width="1.5" marker-end="url(#arr)"/>
+<!-- 判定菱形 -->
+<polygon points="380,185 600,260 380,335 160,260" fill="#FFF4E5" stroke="#F5A623" stroke-width="1.8"/>
+<text x="380" y="252" font-size="14" fill="#5A3E00" text-anchor="middle" font-family="Consolas, monospace">(year % 4 == 0 &amp;&amp; year % 100 != 0)</text>
+<text x="380" y="278" font-size="14" fill="#5A3E00" text-anchor="middle" font-family="Consolas, monospace">|| year % 400 == 0</text>
+<!-- 是分支：右 → 下 -->
+<line x1="600" y1="260" x2="645" y2="260" stroke="#5A6B7D" stroke-width="1.5"/>
+<line x1="645" y1="260" x2="645" y2="396" stroke="#5A6B7D" stroke-width="1.5" marker-end="url(#arr)"/>
+<text x="622" y="252" font-size="15" font-weight="bold" fill="#1E8E3E" text-anchor="middle" font-family="Microsoft YaHei, SimHei, sans-serif">是</text>
+<!-- 否分支：下 -->
+<line x1="380" y1="335" x2="380" y2="396" stroke="#5A6B7D" stroke-width="1.5" marker-end="url(#arr)"/>
+<text x="392" y="362" font-size="15" font-weight="bold" fill="#D93025" text-anchor="start" font-family="Microsoft YaHei, SimHei, sans-serif">否</text>
+<!-- 输出：是闰年（左） -->
+<polygon points="302,400 470,400 458,450 290,450" fill="#DCEBFF" stroke="#2B8CFF" stroke-width="1.5"/>
+<text x="380" y="430" font-size="15" fill="#1B5FA8" text-anchor="middle" font-family="Microsoft YaHei, SimHei, sans-serif">输出：是闰年</text>
+<!-- 输出：不是闰年（右） -->
+<polygon points="567,400 735,400 723,450 555,450" fill="#DCEBFF" stroke="#2B8CFF" stroke-width="1.5"/>
+<text x="645" y="430" font-size="15" fill="#1B5FA8" text-anchor="middle" font-family="Microsoft YaHei, SimHei, sans-serif">输出：不是闰年</text>
+<!-- 汇合 -->
+<line x1="380" y1="450" x2="380" y2="540" stroke="#5A6B7D" stroke-width="1.5"/>
+<line x1="645" y1="450" x2="645" y2="540" stroke="#5A6B7D" stroke-width="1.5"/>
+<line x1="645" y1="540" x2="380" y2="540" stroke="#5A6B7D" stroke-width="1.5"/>
+<line x1="380" y1="540" x2="380" y2="556" stroke="#5A6B7D" stroke-width="1.5" marker-end="url(#arr)"/>
+<!-- 结束 -->
+<rect x="300" y="560" width="160" height="44" rx="22" fill="#2B8CFF" stroke="#1E6FD9" stroke-width="1.5"/>
+<text x="380" y="588" font-size="16" font-weight="bold" fill="#fff" text-anchor="middle" font-family="Microsoft YaHei, SimHei, sans-serif">结束</text>
+</svg></body></html>
